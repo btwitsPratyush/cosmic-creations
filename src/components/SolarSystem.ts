@@ -136,6 +136,7 @@ export class SolarSystem {
     let mouseY = 0;
     let targetX = 0;
     let targetY = 0;
+    let isTouching = false;
     
     const handleMouseMove = (event: MouseEvent) => {
       mouseX = (event.clientX / window.innerWidth) * 2 - 1;
@@ -144,15 +145,44 @@ export class SolarSystem {
       targetY = mouseY * 0.1;
     };
     
+    const handleTouchMove = (event: TouchEvent) => {
+      if (event.touches.length === 1) {
+        event.preventDefault();
+        const touch = event.touches[0];
+        mouseX = (touch.clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(touch.clientY / window.innerHeight) * 2 + 1;
+        targetX = mouseX * 0.1;
+        targetY = mouseY * 0.1;
+      }
+    };
+    
+    const handleTouchStart = (event: TouchEvent) => {
+      isTouching = true;
+      if (event.touches.length === 1) {
+        const touch = event.touches[0];
+        mouseX = (touch.clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(touch.clientY / window.innerHeight) * 2 + 1;
+        targetX = mouseX * 0.1;
+        targetY = mouseY * 0.1;
+      }
+    };
+    
+    const handleTouchEnd = () => {
+      isTouching = false;
+    };
+    
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    window.addEventListener('touchstart', handleTouchStart, { passive: false });
+    window.addEventListener('touchend', handleTouchEnd);
     
     // Update camera position based on mouse
     const updateCamera = () => {
       if (!this.isRunning) return;
       
       const time = this.clock.getElapsedTime();
-      const radius = 50;
-      const height = 30;
+      const radius = window.innerWidth < 768 ? 60 : 50; // Slightly further on mobile
+      const height = window.innerWidth < 768 ? 35 : 30;
       
       this.camera.position.x = Math.cos(time * 0.1 + targetX) * radius;
       this.camera.position.z = Math.sin(time * 0.1 + targetX) * radius;
