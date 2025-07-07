@@ -114,7 +114,7 @@ function App() {
             </p>
             <p className="text-xs sm:text-sm text-white/60 leading-relaxed">
               Explore our solar system in real-time 3D with interactive controls and realistic physics
-            </h1>
+            </p>
           </div>
         </div>
         
