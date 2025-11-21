@@ -12,7 +12,7 @@ A stunning, production-ready 3D solar system simulation built with Three.js, Rea
 - **Saturn's Rings**: Detailed ring system with proper transparency and positioning
 - **Cosmic Starfield**: Beautiful animated starfield background
 
-### Interactive Controls
+### Interactive Controls:-
 - **Master Controls**: Play/pause simulation with real-time speed adjustments
 - **Individual Planet Speeds**: Dedicated sliders for each planet with color-coded feedback
 - **Camera Controls**: Mouse-driven camera movement for different viewing angles
