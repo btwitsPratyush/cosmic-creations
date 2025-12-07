@@ -166,7 +166,7 @@ For questions and support, please open an issue on GitHub.
 
 ---
 
-## 👨‍💻 About the Creator
+## 👨‍💻 About the Creator:-
 
 **Pratyush** - Passionate developer creating beautiful, interactive web experiences
 
