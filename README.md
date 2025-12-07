@@ -35,7 +35,7 @@ A stunning, production-ready 3D solar system simulation built with Three.js, Rea
 - **Browser Support**: All modern browsers (Chrome, Firefox, Safari, Edge)
 - **Mobile Responsive**: Minimum 320px width support
 
-## 📁 Project Structure:-
+## 📁 Project Structure:
 
 ```
 src/
