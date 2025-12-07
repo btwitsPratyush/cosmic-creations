@@ -2,7 +2,7 @@
 
 A stunning, production-ready 3D solar system simulation built with Three.js, React, and TypeScript. This project demonstrates advanced 3D graphics programming, real-time animation, and interactive user interface development with beautiful cosmic-themed design.
 
-## ✨ Features
+## ✨ Features:-
 
 ### Core 3D Implementation
 - **Realistic Solar System**: Accurate scaling and positioning of all 8 planets plus the Sun
