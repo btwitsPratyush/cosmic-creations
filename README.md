@@ -26,7 +26,7 @@ A stunning, production-ready 3D solar system simulation built with Three.js, Rea
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 - **Professional Footer**: "Made with ❤️ by Pratyush © 2024 All Rights Reserved"
 
-## 🚀 Technical Specifications:-
+## 🚀 Technical Specifications:
 
 - **Framework**: React 18 with TypeScript
 - **3D Graphics**: Three.js for WebGL rendering
